@@ -30,6 +30,7 @@ jobs:
         mkdir -p BitcoinConverter.Tests/TestResults
         cd BitcoinConverter.Tests
         dotnet test /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
+        ls -la ./TestResults
 
     - name: Publish Test Coverage Report
       uses: coverallsapp/github-action@v1.1.2
